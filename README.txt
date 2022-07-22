@@ -1,5 +1,3 @@
-# UdacityProject
- udacityProfessionalProject1
 
 # Landing Page
 
