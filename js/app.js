@@ -85,8 +85,17 @@ const scrollToActive = ()=>{  // function to active section while scrolling
 
     Sections.forEach((section)=>{
         const sectionTop = section.offsetTop;
-        if(window.pageYOffset <= sectionTop){
+        const sectionbottom = sectionTop - section.offsetHeight;
+        if(window.pageYOffset <= sectionTop && window.pageYOffset >= sectionbottom){
             section.classList.add('your-active-class');
+            for(let i = 0;i<document.querySelectorAll('li').length;i++){
+                document.querySelectorAll('li')[i].classList.remove('highligted');
+            }
+            for(let i = 0;i<document.querySelectorAll('li').length;i++){
+                if(document.querySelectorAll('li')[i].textContent == section.querySelector('h2').textContent.split(' ').join('')){
+                    document.querySelectorAll('li')[i].classList.add('highligted');
+                }
+            }
         }
     });
 }

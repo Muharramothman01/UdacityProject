@@ -63,6 +63,10 @@ section {
 
 /* ---- Module Rules ---- */
 
+.highligted{
+    background-color: rgb(175, 175, 175);
+}
+
 /* Navigation Styles*/
 .navbar__menu ul {
     padding-left: 0;
@@ -97,7 +101,7 @@ section {
 
 li:hover
 {
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(175, 175, 175);
     cursor: pointer;
 }
 
